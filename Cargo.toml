@@ -1,6 +1,20 @@
 [package]
 name = "zero2prod"
 version = "0.1.0"
+authers = ["Monzer Omer <monzer.a.omer@gmail.com>"]
 edition = "2021"
 
+[lib]
+path="src/lib.rs"
+
+[[bin]]
+path="src/main.rs"
+name="zero2prod"
+
 [dependencies]
+actix-web = "4.7.0"
+serde = {version = "1.0.203", features = ["derive"]}
+tokio = {version = "1.38.0", features = ["macros", "rt-multi-thread"]}
+
+[dev-dependencies]
+reqwest = "0.12.4"
